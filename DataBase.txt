@@ -1,0 +1,80 @@
+/* position */
+insert into restaurant.position (Name) values ('chef');
+insert into restaurant.position (Name) values ('cook');
+insert into restaurant.position (Name) values ('waiter');
+insert into restaurant.position (Name) values ('janitor');
+
+/* employee */
+insert into restaurant.employee (Name, AGE, SALARY, POSITION_ID) values ('James Cartman', 34, 120000, 1);
+insert into restaurant.employee (Name, AGE, SALARY, POSITION_ID) values ('Homer Jackson', 38, 60000, 2);
+insert into restaurant.employee (Name, AGE, SALARY, POSITION_ID) values ('Paul Pirs', 24, 50000, 2);
+insert into restaurant.employee (Name, AGE, SALARY, POSITION_ID) values ('Betty Griffin', 18, 10000, 3);
+insert into restaurant.employee (Name, AGE, SALARY, POSITION_ID) values ('Sue Simpson', 19, 10000, 3);
+
+/* order */
+insert into restaurant.order (TABLE_NUMBER, DATE, WAITER) values (1, '2016-01-01', 4);
+insert into restaurant.order (TABLE_NUMBER, DATE, WAITER) values (4, '2016-02-01', 5);
+insert into restaurant.order (TABLE_NUMBER, DATE, WAITER) values (1, '2016-02-01', 5);
+
+/* dish */
+insert into restaurant.dish (NAME) values ('BBQ chicken');
+insert into restaurant.dish (NAME) values ('Caesar salad');
+insert into restaurant.dish (NAME) values ('Pizza');
+insert into restaurant.dish (NAME) values ('Rasberry ice-cream');
+
+/* order_content */
+insert into restaurant.order_content (ORDER_ID, DISH_ID, QUANTITY) values (1, 1, 2);
+insert into restaurant.order_content (ORDER_ID, DISH_ID, QUANTITY) values (1, 2, 1);
+insert into restaurant.order_content (ORDER_ID, DISH_ID, QUANTITY) values (1, 4, 2);
+insert into restaurant.order_content (ORDER_ID, DISH_ID, QUANTITY) values (2, 3, 4);
+insert into restaurant.order_content (ORDER_ID, DISH_ID, QUANTITY) values (3, 2, 2);
+insert into restaurant.order_content (ORDER_ID, DISH_ID, QUANTITY) values (3, 4, 2);
+
+/* menu */
+insert into restaurant.menu (NAME) values ('Kids meal');
+
+/* menu_content */
+insert into restaurant.menu_content (MENU_ID, DISH_ID) values (1, 3);
+insert into restaurant.menu_content (MENU_ID, DISH_ID) values (1, 4);
+
+/* ingredient */
+insert into restaurant.ingredient (NAME) values ('Salami');
+insert into restaurant.ingredient (NAME) values ('Chicken fillet');
+insert into restaurant.ingredient (NAME) values ('Lettuce');
+insert into restaurant.ingredient (NAME) values ('Cheese');
+insert into restaurant.ingredient (NAME) values ('Tomato');
+insert into restaurant.ingredient (NAME) values ('Olive');
+insert into restaurant.ingredient (NAME) values ('Rasberry');
+insert into restaurant.ingredient (NAME) values ('Cream');
+insert into restaurant.ingredient (NAME) values ('Sugar');
+
+/* dish_components */
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (1, 2);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (2, 2);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (2, 3);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (2, 4);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (2, 5);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (3, 1);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (3, 4);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (3, 5);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (3, 6);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (4, 7);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (4, 8);
+insert into restaurant.dish_components (DISH_ID, INGERDIENT_ID) values (4, 9);
+
+/* warehouse */
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (1, 10);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (2, 30);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (3, 100);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (4, 150);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (5, 210);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (6, 40);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (7, 190);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (8, 15);
+insert into restaurant.warehouse (INGREDIENT_ID, QUANTITY) values (9, 500);
+
+/* kitchen_journal */
+insert into restaurant.kitchen_journal (DISH_ID, COOK_ID, ORDER_ID, DATE) values (1, 1, 1, '2016-06-20');
+insert into restaurant.kitchen_journal (DISH_ID, COOK_ID, ORDER_ID, DATE) values (2, 1, 1, '2016-06-20');
+insert into restaurant.kitchen_journal (DISH_ID, COOK_ID, ORDER_ID, DATE) values (1, 2, 2, '2016-06-20');
+insert into restaurant.kitchen_journal (DISH_ID, COOK_ID, ORDER_ID, DATE) values (4, 3, 3, '2016-06-20');
